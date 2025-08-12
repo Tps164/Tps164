@@ -1,56 +1,114 @@
+/* Общие стили */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
 }
 
+/* Шапка с фото */
 header {
-    background: #35424a;
-    color: #fff;
-    padding: 20px 0;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 2rem 0;
     text-align: center;
 }
 
-header h1 {
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.header-text h1 {
     margin: 0;
+    font-size: 2.2rem;
 }
 
+.header-text p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Основное содержимое */
 main {
-    padding: 20px;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
+/* Секции */
 section {
-    margin-bottom: 20px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: white;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 h2 {
-    color: #35424a;
-    border-bottom: 2px solid #35424a;
-    padding-bottom: 5px;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
 }
 
-a {
-    color: #35424a;
+/* Контакты */
+.contacts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contacts li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contacts a {
+    color: #3498db;
     text-decoration: none;
+    transition: all 0.3s;
 }
 
-a:hover {
+.contacts a:hover {
+    color: #2980b9;
     text-decoration: underline;
 }
 
+/* Подвал */
 footer {
     text-align: center;
-    padding: 10px;
-    background: #35424a;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 1.5rem;
+    background: #2c3e50;
+    color: white;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
 }
